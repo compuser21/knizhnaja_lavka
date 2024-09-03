@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
-    <link href="/static/css/full.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
     <script src="/static/js/script.js"></script>
     <title>Книжная лавка - Онлайн библиотека</title>
   </head>
@@ -16,14 +16,52 @@
                 <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Библиотека</a>
                 <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Авторы</a>
                 <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Контакты</a>
-                <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Войти</a>
+                <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Профиль</a>
             </div>
         </header>
+            <div class="hero min-h-screen"  style="background-image: url(/static/img/books.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold">Добро пожаловать!</h1>
+                            <p class="mb-5 font-bold">
+                                На нашем сайте вы можете почитать книги у нас в библиотеке или быстро найти интересующую вас книгу по имени автора!
+                            </p>
+                        <a href="/" class="btn btn-primary">Библиотека</a>
+                    </div>
+                </div>
+            </div>
         <div class="container flex-grow">
-            <div class="flex w-full" style="display: flex; justify-content: center;">
-                
+            <div class="flex w-full" style="display: flex; justify-content: center; padding-top: 20px">
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
             </div>
-            </div>
+        </div>
         <footer class="footer bg-neutral text-neutral-content items-center p-4">
             <aside class="grid-flow-col items-center">
                 <p>Книжная лавка © 2024 </p>
@@ -37,10 +75,7 @@
                     <a href="/"><p>Контакты</p></a>
                 </div>
                 <div class="toast-end">
-                    <a href="/"><p>Войти</p></a>
-                </div>
-                <div class="toast-end">
-                    <a href="/"><p>Регистрация</p></a>
+                    <a href="/"><p>Профиль</p></a>
                 </div>
             </aside>
         </footer>
