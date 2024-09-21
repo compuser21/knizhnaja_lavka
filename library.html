@@ -13,31 +13,56 @@
             <a href="/" class="bg-neutral bg-base-100 text-xl" style="padding-left: 20px;">Книжная лавка</a>
             </div>
             <div class="toast-top toast-end">
-                <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Библиотека</a>
+                <a href="/library.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Библиотека</a>
                 <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Авторы</a>
                 <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Контакты</a>
                 <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Профиль</a>
             </div>
         </header>
-            <div class="hero min-h-screen" style="background-image: url(/static/img/books.jpg);">
+            <div class="hero min-h-screen" style="background-image: url(/static/img/books1.jpg);">
                 <div class="hero-overlay bg-opacity-60"></div>
                     <div class="hero-content text-neutral-content text-center">
                         <div class="max-w-md">
-                            <h1 class="mb-5 text-5xl font-bold">Добро пожаловать!</h1>
+                            <h1 class="mb-5 text-5xl font-bold">Библиотека</h1>
                             <p class="mb-5 font-bold">
-                                На нашем сайте вы можете почитать книги у нас в библиотеке или быстро найти интересующую вас книгу по имени автора!
+                                Здесь вы быстро сможете найти нужную вам книгу и начать читать ее онлайн! Удобный поиск по жанрам, авторам или названию поможет мгновенно отыскать произведение, которое вас интересует.
                             </p>
-                        <a href="/" class="btn btn-primary">Библиотека</a>
+                            <a href="/library.html" class="btn btn-primary">Библиотека</a>
                     </div>
                 </div>
             </div>
             <div class="card-body items-center text-center mx-auto">
               <div class="card-actions justify-center">
-                <p class="mb-5 text-5xl font-bold">Что такое Книжная лавка?</p>
+                <!-- <p class="mb-5 text-5xl font-bold">Что такое Книжная лавка?</p>
                 <p class="mb-5 font-bold">Онлайн-библиотека "Книжная лавка" — ваш персональный доступ ко множеству книг, от классики до современных бестселлеров, всего в один клик.
                    Здесь вы найдете книги на любой вкус: романы, научная литература, детские книги и многое другое, доступное в любое время и в любом месте.
                     Наслаждайтесь чтением в удобном для вас формате — скачивайте книги на свои устройства или читайте онлайн прямо в браузере.</p>
-                    <a href="/" class="btn btn-primary">Наши книги</a>
+                    <a href="/library.html" class="btn btn-primary">Наши книги</a> -->
+                    <input type="radio" name="radio-2" id="title" class="radio radio-primary" checked="checked"/>
+                    <label for="title">Название</label>
+                    <input type="radio" name="radio-2" id="raiting" class="radio radio-primary"/>
+                    <label for="raiting">Рейтинг</label>
+                    <input type="radio" name="radio-2" id="popularity" class="radio radio-primary"/>
+                    <label for="popularity">Популярные</label>
+                    <input type="radio" name="radio-2" id="longest" class="radio radio-primary"/>
+                    <label for="longest">Самые длинные</label>
+                    <input type="radio" name="radio-2" id="shortest" class="radio radio-primary"/>
+                    <label for="shortest">Самые короткие</label>
+                    <div class="card-actions justify-center">
+                      <label class="input input-bordered input-primary flex items-center gap-2">
+                        <input type="text" class="grow" placeholder="Search" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          class="h-4 w-4 opacity-70">
+                          <path
+                            fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                        </svg>
+                      </label>
+                    </div>
               </div>
             </div>
             <hr> 
@@ -116,7 +141,7 @@
         <div class="card-actions justify-center">
           <p class="mb-5 text-5xl font-bold">Начните читать в Книжной лавке прямо сейчас!</p>
           <p class="mb-5 font-bold">Начните свое литературное путешествие в Книжной лавке, где каждый читатель найдет что-то по душе. Огромный выбор книг разных жанров ждет вас на полках нашей библиотеки. Погружайтесь в мир приключений, знаний и эмоций уже сегодня!</p>
-              <a href="/" class="btn btn-primary">Начать читать</a>
+              <a href="/library.html" class="btn btn-primary">Начать читать</a>
         </div>
       </div>
       <hr>
@@ -124,7 +149,7 @@
             <aside class="grid-flow-col items-center">
                 <p>Книжная лавка © 2024 </p>
                 <div class="toast-end">
-                    <a href="/"><p>Библиотека</p></a>
+                    <a href="/library.html"><p>Библиотека</p></a>
                 </div>
                 <div class="toast-end">
                     <a href="/"><p>Авторы</p></a>
