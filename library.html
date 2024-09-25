@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
     <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
     <script src="/static/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/static/js/sort.js"></script>
     <title>Книжная лавка - Онлайн библиотека</title>
   </head>
   <body>
@@ -62,7 +64,7 @@
             </div>
             <div class="card-body items-center text-center mx-auto">
               <div class="overflow-x-auto">
-                <table class="table">
+                <table class="table" id="books-table">
                   <!-- head -->
                   <thead>
                     <tr>
