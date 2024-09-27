@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    function sortTable(columnIndex, asc = true) {
+    function sortTableInAlphabeticalOrder(columnIndex, asc = true) {
         const rows = $('#books-table tbody tr').get();
 
         rows.sort((a, b) => {
@@ -14,11 +14,50 @@ $(document).ready(function () {
         });
     }
 
+    function sortTableInReversedAlphabeticalOrder(columnIndex, asc = true) {
+        const rows = $('#books-table tbody tr').get();
+
+        rows.sort((a, b) => {
+            const A = $(a).children('td').eq(columnIndex).text();
+            const B = $(b).children('td').eq(columnIndex).text();
+
+            return (A > B ? (asc ? -1 : 1) : (A < B ? (asc ? 1 : -1) : 0));
+        });
+
+        $.each(rows, function(index, row) {
+            $('#books-table tbody').append(row);
+        });
+    }
+
+    function sortNumbersInTable(columnIndex, asc = true) {
+        const rows = $('#books-table tbody tr').get();
+
+        rows.sort((a, b) => {
+            const A = parseFloat($(a).children('td').eq(columnIndex).text());
+            const B = parseFloat($(b).children('td').eq(columnIndex).text());
+
+            return (A > B ? (asc ? -1 : 1) : (A < B ? (asc ? 1 : -1) : 0));
+        });
+
+        $.each(rows, function(index, row) {
+            $('#books-table tbody').append(row);
+        });
+    }
+
     $('#title').click(function () { 
-        sortTable(0);
+        sortTableInAlphabeticalOrder(0);
+    });
+
+    $('#title-from-z-to-a').click(function () { 
+        sortTableInReversedAlphabeticalOrder(0);
     });
 
     $('#raiting').click(function () { 
-        sortTable(2);
+        sortNumbersInTable(2);
+    });
+
+    $('#popularity').click(function (e) { 
+        sortNumbersInTable(4);        
     });
 });
+
