@@ -44,6 +44,21 @@ $(document).ready(function () {
         });
     }
 
+    function reverseSortNumbersInTable(columnIndex, asc = true) {
+        const rows = $('#books-table tbody tr').get();
+
+        rows.sort((a, b) => {
+            const A = parseFloat($(a).children('td').eq(columnIndex).text());
+            const B = parseFloat($(b).children('td').eq(columnIndex).text());
+
+            return (A < B ? (asc ? -1 : 1) : (A > B ? (asc ? 1 : -1) : 0));
+        });
+
+        $.each(rows, function(index, row) {
+            $('#books-table tbody').append(row);
+        });
+    }
+
     $('#title').click(function () { 
         sortTableInAlphabeticalOrder(0);
     });
@@ -56,8 +71,16 @@ $(document).ready(function () {
         sortNumbersInTable(2);
     });
 
-    $('#popularity').click(function (e) { 
+    $('#popularity').click(function () { 
         sortNumbersInTable(4);        
+    });
+
+    $('#longest').click(function () { 
+        sortNumbersInTable(5);
+    });
+
+    $('#shortest').click(function () { 
+        reverseSortNumbersInTable(5);        
     });
 });
 
