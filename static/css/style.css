@@ -4525,7 +4525,8 @@ input.tab:checked + .tab-content,
   gap: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: 600}
+  font-weight: 600;
+  max-width: 200px;}
 .card.image-full :where(figure) {
   overflow: hidden;
   border-radius: inherit}
