@@ -4526,10 +4526,18 @@ input.tab:checked + .tab-content,
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
-  max-width: 200px;}
+  max-width: 200px;
+  text-align: left;
+}
 .card.image-full :where(figure) {
   overflow: hidden;
   border-radius: inherit}
+.book-card {
+  width: 373px;
+  white-space: nowrap;  
+  overflow: hidden;      */
+  text-overflow: ellipsis; 
+}
 .carousel::-webkit-scrollbar {
   display: none}
 .chat-bubble-primary {
@@ -27817,7 +27825,8 @@ details.collapse summary::-webkit-details-marker {
   padding: 0px}
 .card-side {
   align-items: stretch;
-  flex-direction: row}
+  flex-direction: row;
+  max-width: 373px;}
 .card-side :where(figure:first-child) {
   overflow: hidden;
   border-start-start-radius: inherit;
