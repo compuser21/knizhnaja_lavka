@@ -4520,14 +4520,17 @@ input.tab:checked + .tab-content,
   font-size: 0.875rem;
   line-height: 1.25rem}
 .card-title {
-  display: flex;
+  display: inline-block;
   align-items: center;
   gap: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
-  max-width: 200px;
+  max-width: 173px;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card.image-full :where(figure) {
   overflow: hidden;
@@ -4535,7 +4538,7 @@ input.tab:checked + .tab-content,
 .book-card {
   width: 373px;
   white-space: nowrap;  
-  overflow: hidden;      */
+  overflow: hidden;      
   text-overflow: ellipsis; 
 }
 .carousel::-webkit-scrollbar {
@@ -28890,6 +28893,11 @@ html:has(.drawer-open.drawer-open) {
 .tooltip-error {
   --tooltip-color: var(--fallback-er,oklch(var(--er)/1));
   --tooltip-text-color: var(--fallback-erc,oklch(var(--erc)/1))}
+.star {
+    color: #ffcc00; 
+    font-size: 1.5rem; 
+    margin-right: 3px; 
+}
 @media (hover:hover) {
   .hover\:checkbox-success:hover:hover {
       --tw-border-opacity: 1;
