@@ -5,8 +5,6 @@ $(document).ready(function () {
         cards.sort((a, b) => {
             const A = $(a).find(selector).text();
             const B = $(b).find(selector).text();
-            // const A = $(a).children(selector).eq(selector).text();
-            // const B = $(b).children(selector).eq(selector).text();
 
             return (A < B ? (asc ? -1 : 1) : (A > B ? (asc ? 1 : -1) : 0));
         });
@@ -30,6 +28,23 @@ $(document).ready(function () {
             $('.join').append(card);
         });
     }
+
+    function filterCardsByTitle(query) {
+        query = query.toLowerCase();
+        $('.book-card').each(function () {
+            const title = $(this).find('.book-name h2').text().toLowerCase();
+             if (title.includes(query)) {
+                $(this).show();
+             } else {
+                $(this).hide();
+             }
+        });
+    }
+
+    $('input[type="text"]').on('input', function () {
+        const query = $(this).val();
+        filterCardsByTitle(query);
+    });
 
     $('#title').click(function () {
         sortCardsAlphabetically('.book-name h2');
