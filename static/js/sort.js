@@ -1,86 +1,57 @@
 $(document).ready(function () {
-    function sortTableInAlphabeticalOrder(columnIndex, asc = true) {
-        const rows = $('#books-table tbody tr').get();
+    function sortCardsAlphabetically(selector, asc = true) {
+        const cards = $('.book-card').get();
 
-        rows.sort((a, b) => {
-            const A = $(a).children('td').eq(columnIndex).text();
-            const B = $(b).children('td').eq(columnIndex).text();
-
-            return (A < B ? (asc ? -1 : 1) : (A > B ? (asc ? 1 : -1) : 0));
-        });
-
-        $.each(rows, function(index, row) {
-            $('#books-table tbody').append(row);
-        });
-    }
-
-    function sortTableInReversedAlphabeticalOrder(columnIndex, asc = true) {
-        const rows = $('#books-table tbody tr').get();
-
-        rows.sort((a, b) => {
-            const A = $(a).children('td').eq(columnIndex).text();
-            const B = $(b).children('td').eq(columnIndex).text();
-
-            return (A > B ? (asc ? -1 : 1) : (A < B ? (asc ? 1 : -1) : 0));
-        });
-
-        $.each(rows, function(index, row) {
-            $('#books-table tbody').append(row);
-        });
-    }
-
-    function sortNumbersInTable(columnIndex, asc = true) {
-        const rows = $('#books-table tbody tr').get();
-
-        rows.sort((a, b) => {
-            const A = parseFloat($(a).children('td').eq(columnIndex).text());
-            const B = parseFloat($(b).children('td').eq(columnIndex).text());
-
-            return (A > B ? (asc ? -1 : 1) : (A < B ? (asc ? 1 : -1) : 0));
-        });
-
-        $.each(rows, function(index, row) {
-            $('#books-table tbody').append(row);
-        });
-    }
-
-    function reverseSortNumbersInTable(columnIndex, asc = true) {
-        const rows = $('#books-table tbody tr').get();
-
-        rows.sort((a, b) => {
-            const A = parseFloat($(a).children('td').eq(columnIndex).text());
-            const B = parseFloat($(b).children('td').eq(columnIndex).text());
+        cards.sort((a, b) => {
+            const A = $(a).find(selector).text();
+            const B = $(b).find(selector).text();
+            // const A = $(a).children(selector).eq(selector).text();
+            // const B = $(b).children(selector).eq(selector).text();
 
             return (A < B ? (asc ? -1 : 1) : (A > B ? (asc ? 1 : -1) : 0));
         });
 
-        $.each(rows, function(index, row) {
-            $('#books-table tbody').append(row);
+        $.each(cards, function(index, card) {
+            $('.join').append(card);
         });
     }
 
-    $('#title').click(function () { 
-        sortTableInAlphabeticalOrder(0);
+    function sortCardsNumerically(selector, asc = true) {
+        const cards = $('.book-card').get();
+
+        cards.sort((a, b) => {
+            const A = parseFloat($(a).find(selector).text()) || 0;
+            const B = parseFloat($(b).find(selector).text()) || 0;
+
+            return (asc ? A - B : B - A);
+        });
+
+        $.each(cards, function(index, card) {
+            $('.join').append(card);
+        });
+    }
+
+    $('#title').click(function () {
+        sortCardsAlphabetically('.book-name h2');
     });
 
-    $('#title-from-z-to-a').click(function () { 
-        sortTableInReversedAlphabeticalOrder(0);
+    $('#title-from-z-to-a').click(function () {
+        sortCardsAlphabetically('.book-name h2', false);
     });
 
-    $('#raiting').click(function () { 
-        sortNumbersInTable(2);
+    $('#raiting').click(function () {
+        sortCardsNumerically('.book-raiting p', false);
     });
 
-    $('#popularity').click(function () { 
-        sortNumbersInTable(4);        
+    $('#popularity').click(function () {
+        sortCardsNumerically('.book-views p span', false);
     });
 
-    $('#longest').click(function () { 
-        sortNumbersInTable(5);
+    $('#longest').click(function () {
+        sortCardsNumerically('.book-pages p span', false);
     });
 
-    $('#shortest').click(function () { 
-        reverseSortNumbersInTable(5);        
+    $('#shortest').click(function () {
+        sortCardsNumerically('.book-pages p span');
     });
 });
-
