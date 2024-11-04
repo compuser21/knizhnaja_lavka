@@ -29,23 +29,6 @@ $(document).ready(function () {
         });
     }
 
-    function filterCardsByTitle(query) {
-        query = query.toLowerCase();
-        $('.book-card').each(function () {
-            const title = $(this).find('.book-name h2').text().toLowerCase();
-             if (title.includes(query)) {
-                $(this).show();
-             } else {
-                $(this).hide();
-             }
-        });
-    }
-
-    $('input[type="text"]').on('input', function () {
-        const query = $(this).val();
-        filterCardsByTitle(query);
-    });
-
     $('#title').click(function () {
         sortCardsAlphabetically('.book-name h2');
     });
