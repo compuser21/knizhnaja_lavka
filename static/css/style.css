@@ -3141,12 +3141,13 @@ html {
   transform: translateX(0%)}
 .dropdown {
   position: relative;
-  display: inline-block}
+  display: inline-block;
+  z-index: 99999;}
 .dropdown > *:not(summary):focus {
   outline: 2px solid transparent;
   outline-offset: 2px}
 .dropdown .dropdown-content {
-  position: absolute}
+  position: absolute;}
 .dropdown:is(:not(details)) .dropdown-content {
   visibility: hidden;
   opacity: 0;
@@ -30148,6 +30149,9 @@ html:has(.drawer-open.drawer-open) {
   --tw-text-opacity: 1;
   color: var(--fallback-erc,oklch(var(--erc)/var(--tw-text-opacity)))}
 @media (min-width: 640px) {
+  .menu {
+    display: none;
+  }
   .sm\:dropdown-end .dropdown-content {
       inset-inline-end: 0px}
   .sm\:dropdown-left .dropdown-content {
