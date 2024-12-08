@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/script.js"></script>
+    <title>Книжная лавка - Онлайн библиотека</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <header class="navbar bg-neutral bg-base-100">
+        <div class="flex-1">
+          <a href="/" class="bg-neutral bg-base-100 text-xl" style="padding-left: 20px;">Книжная лавка</a>
+        </div>
+        <div class="dropdown dropdown-end lg:hidden">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="/library.html">Библиотека</a></li>
+            <li><a href="/authors.html">Авторы</a></li>
+            <li><a href="/">Контакты</a></li>
+            <li><a href="/">Профиль</a></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex toast-top toast-end">
+          <a href="/library.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Библиотека</a>
+          <a href="/authors.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Авторы</a>
+          <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Контакты</a>
+          <a href="/" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Профиль</a>
+        </div>
+      </header>
+            <div class="hero min-h-screen" style="background-image: url(/static/img/books1.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold">Авторы</h1>
+                            <p class="mb-5 font-bold">
+                              Откройте для себя мир литературы в нашей Книжной лавке, где каждый найдет книгу по своему вкусу. На этой странице вы сможете посмотреть всех авторов, книги которых вы сможете прочитать у нас!
+                            </p>
+                        <a href="/library.html" class="btn btn-primary">Библиотека</a>
+                    </div>
+                </div>
+            </div>
+      <div class="flex-grow p-4 ml-0">
+        <div class="overflow-x-auto">
+          <div class="join flex flex-wrap gap-4 justify-center">
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Говард Лавкрафт</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Джеймс Клавелл</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Джек Лондон</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Дженни Звездочерчик</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Иван Тургенев</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Лев Толстой</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Рэй Брэдбери</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Стивен Кинг</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Френсис Скотт</p>
+              </div>
+            </div>
+            <div class="card w-80 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <p>Фёдор Достоевский</p>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="card-body items-center text-center mx-auto">
+        <div class="card-actions justify-center">
+          <p class="mb-5 text-5xl font-bold">Начните читать в Книжной лавке прямо сейчас!</p>
+          <p class="mb-5 font-bold">Ваш мир книг начинается здесь! Откройте для себя новые миры с помощью книг! Наша книжная лавка – это сокровищница, где собраны произведения самых талантливых писателей. Здесь вы найдете невероятное разнообразие жанров и авторов, каждый найдет себе что-то по душе!</p>
+              <a href="/library.html" class="btn btn-primary">Начать читать</a>
+        </div>
+        <hr>
+      </div>
+      <hr>
+        <footer class="footer bg-neutral text-neutral-content items-center p-4">
+            <aside class="grid-flow-col items-center">
+                <p>Книжная лавка © 2024 </p>
+                <div class="toast-end">
+                    <a href="/library.html"><p>Библиотека</p></a>
+                </div>
+                <div class="toast-end">
+                    <a href="/authors.html"><p>Авторы</p></a>
+                </div>
+                <div class="toast-end">
+                    <a href="/"><p>Контакты</p></a>
+                </div>
+                <div class="toast-end">
+                    <a href="/"><p>Профиль</p></a>
+                </div>
+            </aside>
+        </footer>
+    </div>
+</body>
+</html>
