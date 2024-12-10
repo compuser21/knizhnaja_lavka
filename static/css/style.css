@@ -1455,6 +1455,9 @@ html {
   --tw-border-opacity: 1}
 .btn:disabled {
   pointer-events: none}
+.btn-profile {
+  width: 198px;
+}
 .card {
   position: relative;
   display: flex;
