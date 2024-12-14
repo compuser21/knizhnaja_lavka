@@ -1458,6 +1458,12 @@ html {
 .btn-profile {
   width: 198px;
 }
+.btn-sm {
+  height: 2rem;
+  min-height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem}
 .card {
   position: relative;
   display: flex;
