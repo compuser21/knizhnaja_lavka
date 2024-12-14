@@ -1516,6 +1516,7 @@ dialog {
     transition-property: transform, opacity, visibility;
     overflow-y: hidden;
 }
+
 :where(.modal) {
     align-items: center;
 }
@@ -1865,6 +1866,10 @@ dialog {
   white-space: nowrap;  
   overflow: hidden;      
   text-overflow: ellipsis; 
+}
+.book-cover {
+  width: 200px;
+  height: auto;
 }
 .collapse:not(.collapse-open):not(.collapse-close) > input[type="radio"]:not(:checked) {
   cursor: pointer}
