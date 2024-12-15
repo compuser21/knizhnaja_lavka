@@ -1867,6 +1867,15 @@ dialog {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.card-title-main {
+  display: inline-block;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: left;
+}
 .book-card {
   width: 373px;
   white-space: nowrap;  
