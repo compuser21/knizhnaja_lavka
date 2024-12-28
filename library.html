@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/static/js/sort.js"></script>
     <script src="/static/js/search.js"></script>
+    <script src="/static/js/menu.js"></script>
     <title>Книжная лавка - Онлайн библиотека</title>
   </head>
   <body>
@@ -15,15 +16,15 @@
           <a href="/" class="bg-neutral bg-base-100 text-xl" style="padding-left: 20px;">Книжная лавка</a>
         </div>
         <div class="dropdown dropdown-end lg:hidden">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <label tabindex="0" class="btn btn-ghost" id="menu-button">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </label>
-          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a href="/library.html">Библиотека</a></li>
-            <li><a href="/authors.html">Авторы</a></li>
-            <li><a href="/profile.html">Профиль</a></li>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-40" style="display: none;" id="menu">
+            <li class="text-xl"><a href="/library.html">Библиотека</a></li>
+            <li class="text-xl"><a href="/authors.html">Авторы</a></li>
+            <li class="text-xl"><a href="/profile.html">Профиль</a></li>
           </ul>
         </div>
         <div class="hidden lg:flex toast-top toast-end">
@@ -190,6 +191,7 @@
               </div>
             </div>
           </div>
+          
           <hr> 
         <footer class="footer bg-neutral text-neutral-content items-center p-4">
             <aside class="grid-flow-col items-center">
