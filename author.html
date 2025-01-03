@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/static/js/menu.js"></script>
+    <title>Книжная лавка - Онлайн библиотека</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <header class="navbar bg-neutral bg-base-100">
+        <div class="flex-1">
+          <a href="/" class="bg-neutral bg-base-100 text-xl" style="padding-left: 20px;">Книжная лавка</a>
+        </div>
+        <div class="dropdown dropdown-end lg:hidden">
+          <label tabindex="0" class="btn btn-ghost" id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-40" style="display: none;" id="menu">
+            <li class="text-xl"><a href="/library.html">Библиотека</a></li>
+            <li class="text-xl"><a href="/authors.html">Авторы</a></li>
+            <li class="text-xl"><a href="/profile.html">Профиль</a></li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex toast-top toast-end">
+          <a href="/library.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Библиотека</a>
+          <a href="/authors.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Авторы</a>
+          <a href="/profile.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Профиль</a>
+        </div>
+      </header>
+            <div class="hero min-h-screen" style="background-image: url(/static/img/books4.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-neutral-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="mb-5 text-5xl font-bold">Лев Толстой</h1>
+                            <p class="mb-5 text-2xl font-bold">
+                                «Счастье не в том, чтобы делать всегда что хочешь, а в том, чтобы всегда хотеть того, что делаешь» — Лев Толстой.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        <div class="container flex-grow mx-auto">
+            <div class="flex w-full justify-center">
+              <div class="card bg-base-100 w-96 shadow-xl items-center">
+                <div class="pt-10">
+                  <img src="/static/img/authors/lev_tolstoj.webp" alt="Сёгун" class="rounded-xl author-image" />
+                </div>
+                <div class="card-body items-center text-center">
+                </div>
+              </div>
+              <div class="card bg-base-100 w-96 shadow-xl">
+                <div class="card-body items-center text-center">
+                  <h2 class="text-3xl font-bold pt-5">Книги автора:</h2>
+                  <p class="font-bold">Война и мир</p>
+                  <p class="font-bold">Анна Каренина</p>
+                  <p class="font-bold">Воскресение</p>
+                  <p class="font-bold">Севастопольские рассказы</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      <hr>
+      <div class="card-body items-center text-center mx-auto">
+        <div class="card-actions justify-center">
+          <p class="mb-5 text-5xl font-bold ">Начните читать в Книжной лавке прямо сейчас!</p>
+          <p class="mb-5 font-bold">Начните свое литературное путешествие в Книжной лавке, где каждый читатель найдет что-то по душе. Огромный выбор книг разных жанров ждет вас на полках нашей библиотеки. Погружайтесь в мир приключений, знаний и эмоций уже сегодня!</p>
+              <a href="/library.html" class="btn btn-primary">Начать читать</a>
+        </div>
+        <hr>
+      </div>
+        <footer class="footer bg-neutral text-neutral-content items-center p-4">
+            <aside class="grid-flow-col items-center">
+                <p>Книжная лавка © 2024 </p>
+            </aside>
+        </footer>
+    </div>
+</body>
+</html>
