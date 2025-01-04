@@ -16,29 +16,4 @@ $(document).ready(function () {
     setTimeout(() => {
         $('#send-code-again').removeAttr('disabled')
     }, time * 1000);
-
-    // $('form').submit(function (e) { 
-    //     e.preventDefault();
-    //     const formData = {
-    //         code: $('#input-code').val()
-    //     }
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "/get-code",
-    //         data: formData,
-    //         dataType: 'json',
-    //         success: function (response) {
-    //             if (response.success) {
-    //                 window.location.href('/library');
-    //             } else {
-    //                 if (response.errors.code) {
-    //                     $("#error").text(response.errors.code);
-    //                 }
-    //             }
-    //         },
-    //         error: function (error) {
-    //             $('#error').text(error);
-    //         }
-    //     }); 
-    // });
 });
