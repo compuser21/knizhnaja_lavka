@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let time = 10;
+    let time = 300;
     function formatTime(totalSeconds) {
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
