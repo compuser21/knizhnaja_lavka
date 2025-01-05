@@ -491,6 +491,11 @@
 .mx-1\.5 { margin-left: .375rem; margin-right: .375rem; }
 .w-1 { width: .25rem; }
 .h-1 { height: .25rem; }
+.w-6 { width: 1.5rem; }
+.h-6 { height: 1.5rem; }
+.w-9 {width: 2.25rem;}
+.h-9 {height: 2.25rem;}
+.mr-2 { margin-right: 0.5rem; }
 .rating { position: relative; display: inline-flex; }
 .rating input { -moz-appearance: none; appearance: none; -webkit-appearance: none; }
 .rating input:checked~input, .rating input[aria-checked=true]~input { --tw-bg-opacity: .2; }
@@ -499,6 +504,8 @@
 .rating :where(input) { cursor: pointer; border-radius: 0; animation: rating-pop var(--animation-input, .25s) ease-out; height: 1.5rem; width: 1.5rem; background-color: var(--fallback-bc, oklch(var(--bc) / var(--tw-bg-opacity))); --tw-bg-opacity: 1; }
 .mask { -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
 .bg-orange-400 { --tw-bg-opacity: 1; background-color: rgb(251 146 60 / var(--tw-bg-opacity)); }
+.inline-flex {display: inline-flex;}
+.dark-outline-text { text-shadow: 2px 2px 0px black,  /* Верхний правый */ -2px 2px 0px black,  /* Верхний левый */ 2px -2px 0px black, /* Нижний правый */ -2px -2px 0px black, /* Нижний левый */ 2px 0px 0px black,  /* Справа */ -2px 0px 0px black,  /* Слева */ 0px 2px 0px black,  /* Снизу */ 0px -2px 0px black; /* Сверху */ }
 @media (min-width: 1024px) {
  .lg\:flex { display: flex; }
  .lg\:hidden { display: none; }
