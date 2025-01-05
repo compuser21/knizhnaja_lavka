@@ -87,22 +87,24 @@
                 </div>
                 <div class="mx-auto">
                   <p class="mb-2 text-2xl font-bold">Оставить отзыв</p>
-                  <form action="#">
-                      <div>
-                        <p class="mt-2">Рейтинг</p>
-                          <div class="rating mt-2">
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked="checked" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                          </div>
-                          <p class="mt-2">Текст отзыва</p>
-                          <textarea id="message" rows="6" class="textarea-bordered mt-3 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
+                  <form action="#" class="form-container">
+                    <div class="form-control mt-3">
+                      <label for="rating" class="label p-0">Рейтинг</label>
+                      <div id="rating" class="rating">
+                        <input type="radio" name="rating" id="star1" class="mask mask-star-2 bg-orange-400" />                        
+                        <input type="radio" name="rating" id="star2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating" id="star3" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating" id="star4" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating" id="star5" class="mask mask-star-2 bg-orange-400" />
                       </div>
-                      <button type="submit" class="btn btn-primary mt-4">Отправить отзыв</button>
+                    </div>
+                    <div class="form-control mt-4">
+                      <label for="message" class="label p-0">Текст отзыва</label>
+                      <textarea id="message" name="review" rows="6" class="textarea-bordered block mt-1 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-5">Отправить отзыв</button>
                   </form>
-              </div>
+                  </div>  
                 </div>
               </div>
             </div>
