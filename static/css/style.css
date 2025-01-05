@@ -431,9 +431,11 @@
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-5 { margin-bottom: 1.25rem; }
+.mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-3 { margin-top: 0.75rem; }
 .mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.25rem; }
 .mt-6 { margin-top: 1.5rem; }
 .mt-40 {margin-top: 10rem;}
 .flex { display: flex; }
@@ -465,6 +467,7 @@
 .rounded-xl { border-radius: 0.75rem; }
 .rounded-full { border-radius: 9999px; }
 .bg-opacity-60 { --tw-bg-opacity: 0.6; }
+.p-0 { padding: 0; }
 .p-2 { padding: 0.5rem; }
 .p-4 { padding: 1rem; }
 .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
