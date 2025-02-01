@@ -163,9 +163,24 @@
 }
 .link { cursor: pointer; text-decoration-line: underline; }
 .link-hover { text-decoration-line: none; }
-.menu { display: flex; flex-flow: column wrap; font-size: 0.875rem; line-height: 1.25rem; padding: 0.5rem; }
+.dropdown {
+  margin-top: 5.2rem;
+}
+.menu {
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+}
+.menu a {
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
 .menu:where(li:not(.menu-title) >:not(ul, details,.menu-title,.btn)) { display: grid; grid-auto-flow: column; align-content: flex-start; align-items: center; gap: 0.5rem; grid-auto-columns: minmax(auto, max-content) auto max-content; user-select: none; }
 :where(.menu li) { position: relative; display: flex; flex-shrink: 0; flex-flow: column wrap; align-items: stretch; }
+#menu-button {
+  padding-right: 20px;
+}
 .min-h-screen { min-height: 100vh; }
 :root:has(:is(.modal-open,.modal:target,.modal-toggle:checked +.modal,.modal[open])) { overflow: hidden; scrollbar-gutter: stable; }
 .modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open] { pointer-events: auto; visibility: visible; opacity: 1; }
@@ -439,6 +454,7 @@
 .mt-6 { margin-top: 1.5rem; }
 .mt-40 {margin-top: 10rem;}
 .flex { display: flex; }
+.grid { display: grid; }
 .hidden { display: none; }
 .h-4 { height: 1rem; }
 .h-5 { height: 1.25rem; }
