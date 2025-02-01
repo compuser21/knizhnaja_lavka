@@ -2,9 +2,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
-     <link rel="stylesheet" href="/static/css/style.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/static/js/menu.js"></script>
+    <script src="/static/js/mobile-adaptive.js"></script> <!--new script-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Книжная лавка - Онлайн библиотека</title>
   </head>
   <body>
@@ -13,25 +15,25 @@
         <div class="flex-1">
           <a href="/" class="bg-neutral bg-base-100 text-xl" style="padding-left: 20px;">Книжная лавка</a>
         </div>
+        <!--new design of dropdown-->
         <div class="dropdown dropdown-end lg:hidden">
-          <label tabindex="0" class="btn btn-ghost" id="menu-button">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </label>
-          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-40" style="display: none;" id="menu">
-            <li class="text-xl"><a href="/library.html">Библиотека</a></li>
-            <li class="text-xl"><a href="/authors.html">Авторы</a></li>
-            <li class="text-xl"><a href="/profile.html">Профиль</a></li>
-          </ul>
+          <div class="dropdown-content menu p-2 shadow bg-base-100 rounded-box mt-40" style="display: none;" id="menu">
+            <a href="#" class="text-xl font-bold">Библиотека</a>
+            <a href="#" class="text-xl font-bold">Авторы</a>
+            <a href="#" class="text-xl font-bold">Профиль</a>
+          </div>
         </div>
+        <a href="javascript:void(0);" class="icon" id="menu-button">
+          <i class="fa fa-bars"></i>
+        </a>
+
         <div class="hidden lg:flex toast-top toast-end">
           <a href="/library.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Библиотека</a>
           <a href="/authors.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Авторы</a>
           <a href="/profile.html" class="btn btn-neutral bg-neutral bg-base-100 text-xl">Профиль</a>
         </div>
       </header>
-            <div class="hero min-h-screen" style="background-image: url(/static/img/books.jpg);">
+            <div class="hero min-h-screen" style="background-image: url(https://knizhnaya-lavka-static.hb.ru-msk.vkcloud-storage.ru/static/backgrounds/books_index.jpg);">
                 <div class="hero-overlay bg-opacity-60"></div>
                     <div class="hero-content text-neutral-content text-center">
                         <div class="max-w-md">
@@ -57,13 +59,13 @@
             <div class="flex w-full justify-center">
                 <div class="card bg-base-100 w-96 shadow-xl">
                     <figure class="px-10 pt-10">
-                      <img src="/static/img/books/bolshoj_belyj_gibbon.jpg" class="rounded-xl" />
+                      <img src="https://knizhnaya-lavka-media.hb.ru-msk.vkcloud-storage.ru/book_covers/bolshoj-belyij-gibbon.jpg" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
                       <h2 class="card-title-main">Самая короткая книга недели</h2>
                       <p>Большой Белый Гиббон, 189 стр.</p>
                       <div class="card-actions">
-                        <button class="btn btn-primary">Подробнее</button>
+                        <a href="/" class="btn btn-primary">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -77,7 +79,7 @@
                       <h2 class="card-title-main">Самая длинная книга недели</h2>
                       <p>Сегун, 1240 стр.</p>
                       <div class="card-actions">
-                        <button class="btn btn-primary">Подробнее</button>
+                        <a href="/" class="btn btn-primary">Подробнее</a>
                       </div>
                     </div>
                   </div>
